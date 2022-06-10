@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVBAR */
+.navbar {
+    /* border: 2px solid red; */
+    background-color: black;
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/*---------------------------------------*/
+
+/* LOGO */
+.logo {
+    /* border: 2px solid red; */
+    margin-left: 20px;
+    font-size: 33px;
+    text-shadow: 2px 2px red;
+}
+/*---------------------------------------*/
+
+/* MENU */
+.menu {
+    /* border: 2px solid red; */
+    margin-right: 10px;
+}
+.menu ul li {
+    list-style: none;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 26px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.menu ul li a:hover {
+    color: deepskyblue;
+    /* text-shadow: 1px 1px 1px cyan; */
+}
+/*------------------------------------------------------------------------------------------------------*/
+
+.gamecontainer {
+    /* border: 2px solid red; */
+    margin-top: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* GRID */
+.table {
+    /* border: 2px solid red; */
+    display: grid;
+    grid-template-rows: repeat(3, 12vw);
+    grid-template-columns: repeat(3, 11vw);
+}
+
+/* GRID ITEMS */
+.boxes {
+    border: 2px solid black;
+    font-family: 'Merienda One', cursive;
+    font-size: 5vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxes:hover {
+    background-color: rgb(213, 237, 253);
+    cursor: pointer;
+}
+/*---------------------------------------*/
+
+/* GAME TEXT */
+.info {
+    /* border: 2px solid red; */
+    padding-left: 12vw;
+    font-family: 'Open Sans', sans-serif;
+}
+.info h2 {
+    font-size: 40px;
+    border-bottom: 2px solid red;
+}
+.info p {
+    font-size: 30px;
+}
+/*---------------------------------------*/
+
+/* GIF */
+.info .image img {
+    /* border: 2px solid red; */
+    height: 10vw;
+    width: 15vw;
+    visibility: hidden;
+}
+/*---------------------------------------*/
+
+/* BUTTON */
+.info #btn {
+    /* border: 2px solid red; */
+    margin-left: 70px;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: lightcyan;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+.info #btn:hover {
+    background-color: lightyellow;
+    cursor: pointer;
+}
+/*---------------------------------------*/
+
+/* UTILITY CLASSES */
+.bt0 {
+    border-top: 0;
+}
+.br0 {
+    border-right: 0;
+}
+.bb0 {
+    border-bottom: 0;
+}
+.bl0 {
+    border-left: 0;
+}
+/*---------------------------------------*/
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 600px) 
+{
+    .menu ul li a{
+        display: none;
+    }
+}
+
+/* TABLET */
+@media screen and (max-width: 900px) 
+{
+
+    .gamecontainer {
+        margin-top: 100px;
+    }
+
+    .table {
+        grid-template-rows: repeat(3, 120px);
+        grid-template-columns: repeat(3, 120px);
+    }
+    .boxes {
+        font-size: 30px;
+    }
+
+    .info h2 {
+        font-size: 28px;
+    }
+    .info p {
+        font-size: 22px;
+    }
+
+    .image img {
+        margin-left: 22px;
+    }
+
+    .info #btn {
+        margin-left: 50px;
+        padding: 4px;
+        font-size: 14px;
+    }
+}
+
+/* PHONE */
+@media screen and (max-width: 600px) 
+{
+    .gamecontainer {
+        /* border: 2px solid red; */
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .table {
+        /* border: 2px solid red; */
+        grid-template-rows: repeat(3, 90px);
+        grid-template-columns: repeat(3, 100px);
+        margin-top: 20px;
+    }
+    .boxes {
+        font-size: 30px;
+    }
+
+    .info {
+        /* border: 2px solid red; */
+        margin-top: 40px;
+        padding-left: 0px;    
+    }
+    .info h2 {
+        font-size: 25px;
+    }
+    .info p {
+        font-size: 20px;
+    }
+
+    .image img {
+        margin-left: 40px;
+        height: 400px;
+        width: 400px;
+    }
+
+    .info #btn {
+        margin-left: 40px;
+        padding: 3px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+}
+/*---------------------------------------*/
